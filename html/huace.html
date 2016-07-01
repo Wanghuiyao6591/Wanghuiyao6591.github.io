@@ -1,0 +1,93 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>画册</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+<!-- ****************************nav*************************** -->
+	<nav class="nav box">
+		<div class="tab inner text">
+			<li>
+				<a href="../index.html">这就是我</a>
+			</li>
+			<li>
+				<a href="about.html">关于&nbsp;我</a>
+			</li>
+			<li>
+				<a href="skill.html">我的技能</a>
+			</li>
+			<li class="active">
+				<a href="display.html">作品展示</a>
+			</li>
+			<li>
+				<a href="expersion.html">工作经历</a>
+			</li>
+			<li>
+				<a href="call.html">联系&nbsp;我</a>
+			</li>
+		</div>
+	</nav>
+<!-- **************************main************************** -->
+    <div class="slideshow">
+    	<div class="slide">
+	  		<img src="../img/huace1.jpg">
+	  	</div>
+		<div class="slide">
+			<img src="../img/huace2.jpg">
+		</div>
+	  	<div class="slide">
+	  		<img src="../img/huace3.jpg">
+	  	</div>
+	  	<div class="slide">
+	  		<img src="../img/huace4.jpg">
+	  	</div>
+	  	<div class="slide">
+	  		<img src="../img/huace5.jpg">
+	  	</div>
+	  	<div class="slide">
+	  		<img src="../img/huace6.jpg">
+	  	</div>
+	</div>
+
+
+	<script src="../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="../js/imagesloaded.js"></script>
+	<script src="../js/smartresize.js"></script>
+	<script src="../js/jquery.skidder.js"></script>
+	<script type="text/javascript">
+		$('.slideshow').each( function() {
+		  	var $slideshow = $(this);
+		  	$slideshow.imagesLoaded( function() {
+				$slideshow.skidder({
+			  		slideClass    : '.slide',
+			  		animationType : 'css',
+			  		scaleSlides   : true,
+			  		maxWidth : 1200,
+			  		maxHeight: 500,
+			  		paging        : true,
+			  		autoPaging    : true,
+			  		pagingWrapper : ".skidder-pager",
+			  		pagingElement : ".skidder-pager-dot",
+			  		swiping       : true,
+			  		leftaligned   : false,
+			  		cycle         : true,
+			  		jumpback      : false,
+			  		speed         : 200,
+			  		autoplay      : false,
+			  		autoplayResume: false,
+			  		interval      : 4000,
+			  		transition    : "slide",
+			  		afterSliding  : function() {},
+			  		afterInit     : function() {}
+				});
+		 	});
+		});
+		$(window).smartresize(function(){
+		  	$('.slideshow').skidder('resize');
+		});
+</script>
+</body>
+</html>
