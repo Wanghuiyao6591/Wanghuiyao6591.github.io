@@ -445,3 +445,54 @@ nav .tab .active a{
 .call .inner .weixin a:hover img{
 	display: block;
 }
+/*************************************ps***********************************/
+.silder-box{
+	margin:50px auto ;
+	position:relative;
+}
+.silder1{
+	margin:0 auto 0;
+}
+.silder1 li{
+	width:400px;
+	height:400px;
+}
+.silder1 li img{
+	width:100%;
+	height:100%;
+}
+.silder-button{
+	top:173px;
+	width:25px;
+	height:54px;
+	position:absolute;
+	cursor:pointer;
+}
+.silder-button.btl{
+	left:10px;
+	background:url(../img/bl.png);
+}
+.silder-button.btr{
+	right:10px;
+	background:url(../img/br.png);
+}
+
+.silder-box-1{
+	width:1000px;
+}
+p{
+	font-size:20px;
+	line-height:20px;
+	text-align:center;
+	color:#333;
+}
+p span{
+	color:#CB0000;
+}
+h1{
+	font-size:20px;line-height:50px;text-align:center;color:#333;}
+h1 em{font-size:30px;color:#CB0000;padding:0 10px;}
+textarea{display:block;text-indent:0;width:500px;margin:0 auto 20px;background:#ccc;border:0 none;resize:;font-size:12px;min-height:120px;}
+textarea.t1{height:340px;margin:20px auto ;}
+
+.small-navs{position:absolute;}

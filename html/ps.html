@@ -1,0 +1,112 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PS</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+</head>
+
+<body>
+<!-- ****************************nav*************************** -->
+	<nav class="nav box">
+		<div class="tab inner text">
+			<li>
+				<a href="../index.html">这就是我</a>
+			</li>
+			<li>
+				<a href="about.html">关于&nbsp;我</a>
+			</li>
+			<li>
+				<a href="skill.html">我的技能</a>
+			</li>
+			<li class="active">
+				<a href="display.html">作品展示</a>
+			</li>
+			<li>
+				<a href="expersion.html">工作经历</a>
+			</li>
+			<li>
+				<a href="call.html">联系&nbsp;我</a>
+			</li>
+		</div>
+	</nav>
+<!-- **************************main************************** -->
+    <div class="ps">
+        <div class="inner">
+            <div class='silder-box silder-box-1'>
+                <div class='silder1'>
+                    <ul>
+                        <li>
+                            <img src="../img/icon1.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon2.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon3.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon4.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon5.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon6.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon7.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon8.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon9.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon11.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon12.jpg">
+                        </li>
+                        <li>
+                            <img src="../img/icon13.jpg">
+                        </li>
+                    </ul>
+                </div>
+                <div class='silder-button btl'></div>
+                <div class='silder-button btr'></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/mySystem.js"></script>
+    <script>
+    $(function(){
+        //回调函数计数
+        var callbackIndex = 0;
+        $('.silder-box-1').mySilder({
+            width:400, //容器的宽度 必选参数!!!!!!
+            height:400, //容器的高度 必选参数!!!!!!
+            auto:true,//是否自动滚动
+            autoTime:5, //自动滚动时，时间间隙，即多长滚动一次,单位(秒)
+            direction:'x',//滚动方向,默认X方向
+            autoType:'left', //滚动方向，auto为true时生效
+            few:1,//一次滚动几个，默认滚动1张
+            showFew:2, //显示几个,就不用调css了,默认显示一个
+            clearance:50, //容器之间的间隙，默认为 0
+            silderMode:'linear' ,//滚动方式
+            timeGap:400,//动画间隙，完成一次动画需要多长时间，默认700ms
+            buttonPre:'.silder-button.btl',//上一个，按钮
+            buttonNext:'.silder-button.btr',//下一个，按钮
+            jz:true, //点击时，是否等待动画完成
+            runEnd:function(){//回调函数
+                callbackIndex ++ ;
+                $('.cj em').text(callbackIndex);
+            }
+        });
+    });
+</script>
+</body>
+</html>
