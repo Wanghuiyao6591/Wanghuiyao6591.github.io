@@ -1,3 +1,232 @@
-h1{
-    color: red;
+@import url(../css/public.css);
+
+*{
+	font-size: 12px;
+	color:#666;
+	font-family: "微软雅黑","宋体","Arial";
+}
+.box{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.inner{
+	width: 1200px;
+	height: auto;
+	box-sizing:border-box;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.text{
+	text-align: center;
+}
+a,img{
+	display: block;
+}
+/*************************************index************************************/
+
+
+		 /*****************************nav****************************/
+nav{
+	padding-top: 40px;
+}
+nav .tab li{
+	display: block;
+	float: left;
+	height: 42px;
+	margin-right: 2px;
+	width: 198px;
+	line-height: 40px;
+	background: #fff;
+	border-bottom: 2px solid black;
+}
+nav .tab .active{
+	border-radius: 4px;
+	background: black;
+	height: 42px;
+}
+nav .tab li a{
+	display: block;
+	font-size: 16px;
+	color: black;
+}
+nav .tab .active a{
+	color: #fff;
+}
+		/***************************banner***************************/
+#wrap {
+	width: 100%;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+.juicyslider {
+	width: 1200px;
+	margin:0 auto;
+    position: relative;
+}
+.juicyslider ul {
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow: hidden;
+    list-style: none outside none;
+    padding:0;
+    margin:0;
+}
+.juicyslider li {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display:none;       /* all hidden initially */
+}
+.juicyslider li:first-child {
+    display: block;
+}
+.juicyslider .nav {
+    position: absolute;
+    top: 45%;
+    padding: 20px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    z-index: 1000;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    background-image: url(../img/nav-40.png);
+}
+.juicyslider:hover .nav {
+    opacity: .5;
+    filter: alpha(opacity=50); 
+}
+.juicyslider .nav.next {
+    right: 3%;
+}
+.juicyslider .nav.prev {
+    left: 3%;
+    background-position: 40px 0;
+}
+.juicyslider .mask {
+    background-image: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.juicyslider img.maxw {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    position: absolute;
+    filter:inherit;     /* for ie8 to inherit parent opacity */
+}
+.juicyslider img.maxh {
+    width: auto;
+    max-width: none;
+    height: 100%;
+    position: absolute;
+    filter:inherit;     /* for ie8 to inherit parent opacity */
+}
+
+/*************************************about me************************************/
+.main{
+	height: 553px;
+}
+.main .inner{
+	height: 553px;
+	background: url(../img/about1.jpg);
+}
+.main .inner ul{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.main .inner ul li{
+	overflow: hidden;
+	position: relative;
+}
+.main .inner ul li img{
+	position: absolute;
+	top:0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	over flow: hidden;
+	transition:all 0.5s ease;
+}
+.main .inner ul li a:hover img{
+	opacity: 1;
+	transform:scale(1.2,1.2);/* //改变形状原来的1.2倍*/
+}
+.main .inner ul .school{
+	width: 200px;
+	height: 200px;
+	top:36px;
+	left: 172px;
+}
+.main .inner ul .school img{
+	width: 140px;
+	height: 140px;
+}
+.main .inner ul .me{
+	width: 340px;
+	height:340px;
+	top:-102px;
+	left: 437px;
+}
+.main .inner ul .me img{
+	width: 280px;
+	height: 280px;
+	opacity: 0;
+}
+/*************************************skill***********************************/
+.skill-box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #f1f1f1;
+}
+.skill-box .box .inner ul li{
+	background: #f1f1f1;
+}
+.skill-box .box .inner .active{
+	background: black;
+}
+.skill{
+	background: #f1f1f1;
+	height: 557px;
+}
+.skill .inner{
+	height: 557px;
+	background: url(../img/skill1.jpg) 1200px;
+}
+.skill .inner ol{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.skill .inner ol li{
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	background: yellow;
+	opacity: 0.3;
+}
+.skill .inner ol li a:hover img{
+
+}
+.skill .inner ol .dw{
+	width: 100px;
+	height: 100px;
+	top:84px;
+	left: 118px;
 }

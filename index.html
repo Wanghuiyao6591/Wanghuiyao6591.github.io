@@ -2,15 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Wanghuiyao</title>
     <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
-<h1>Mr.zhang</h1>
-<ul>
-    <li><a href="../jingdong/index.html">京东</a></li>
-    <li><a href="../tianmao/index.html">天猫</a> </li>
-    <li><a href="../zgyd/index.html">中国移动</a> </li>
-</ul>
+<!-- ****************************nav*************************** -->
+	<nav class="nav box">
+		<div class="tab inner text">
+			<li class="active">
+				<a href="index.html">这就是我</a>
+			</li>
+			<li>
+				<a href="./html/about.html">关于&nbsp;我</a>
+			</li>
+			<li>
+				<a href="./html/skill.html">我的技能</a>
+			</li>
+			<li>
+				<a href="./html/display.html">作品展示</a>
+			</li>
+			<li>
+				<a href="./html/expersion.html">工作经历</a>
+			</li>
+			<li>
+				<a href="./html/call.html">联系&nbsp;我</a>
+			</li>
+		</div>
+	</nav>
+<!-- **************************banner************************** -->
+	<div id="wrap">
+        <!-- Begin page content -->
+        <div class="container">
+            <div class="row-fluid">
+                <div class="pagination-centered span4">
+                    <div id="myslider2" class="juicyslider">
+                        <ul>
+                            <li>
+                            	<a href="./html/about.html">
+                            		<img src="./img/banner1.png" alt="">
+                            	</a>
+                            </li>
+                            <li>
+                            	<a href="./html/skill.html">
+                            		<img src="./img/banner2.png" alt="">
+                            	</a>
+                            </li>
+                            <li>
+                            	<a href="./html/display.html">
+                            		<img src="./img/banner3.png" alt="">
+                            	</a>
+                            </li>
+                            <li>
+                            	<a href="./html/expersion.html">
+                            		<img src="./img/banner4.png" alt="">
+                            	</a>
+                            </li>
+                            <li>
+                            	<a href="./html/call.html">
+                            		<img src="./img/banner5.png" alt="">
+                            	</a>
+                            </li>
+                        </ul>
+                        <div class="nav next"></div>
+                        <div class="nav prev"></div>
+                        <!-- <div class="mask"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+
+	<script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+             $(function() {
+                $('#myslider2').juicyslider({
+                    width: 1200,
+                    height: 557,
+                    mask: 'square',
+                    show: {effect: 'drop', duration: 3000},
+                    hide: {effect: 'drop', duration: 500},
+                });
+            });
+        </script>
 </body>
 </html>
